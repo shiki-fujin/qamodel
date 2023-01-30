@@ -2,7 +2,7 @@ import torch
 from transformers import AutoTokenizer, AutoModel
 
 class QAEmbedder:
-  def __init__(self, model_name="sentence-transformers/paraphrase-MiniLM-L6-v2"):
+  def __init__(self, model_name="paraphrase-MiniLM-L6-v2"):
     """
     Defines a QA embedding model. This is, given a set of questions,
     this class returns the corresponding embedding vectors.
@@ -104,7 +104,7 @@ class QAEmbedder:
 
 
 class QASearcher:
-  def __init__(self, model_name="sentence-transformers/paraphrase-MiniLM-L6-v2"):
+  def __init__(self, model_name="paraphrase-MiniLM-L6-v2"):
     """
     Defines a QA Search model. This is, given a new question it searches
     the most similar questions in a set 'context' and returns both the best
