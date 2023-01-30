@@ -1,7 +1,8 @@
 FROM ubuntu:18.04
 
-# Install wget and required pip libraries
+# Install wget
 RUN apt-get update &&\
+    apt-get ca-certificates &&\
     apt-get install -y --no-install-recommends wget &&\
     rm -rf /var/lib/apt/lists/*
 
