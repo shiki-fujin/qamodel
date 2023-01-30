@@ -14,7 +14,7 @@ class QAEmbedder:
     self.model = None
     self.tokenizer = None
     
-    self.model_name = 'sentence-transformers/paraphrase-MiniLM-L6-v2
+    self.model_name = 'sentence-transformers/paraphrase-MiniLM-L6-v2'
     self.set_model(model_name)
   
   
