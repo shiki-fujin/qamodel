@@ -1,8 +1,8 @@
-FROM python:3.8.12-slim-buster
+FROM ubuntu:18.04
 
 # Install wget and required pip libraries
-RUN yum update &&\
-    yum install -y --no-install-recommends wget &&\
+RUN apt-get update &&\
+    apt-get install -y --no-install-recommends wget &&\
     rm -rf /var/lib/apt/lists/* &&\
     pip install --no-cache-dir transformers[torch] uvicorn fastapi
 
@@ -12,6 +12,8 @@ COPY download_model.sh .
 # Downloads the required QA model
 RUN bash download_model.sh
     
+FROM python:3.8.12-slim-buster
+
 # copies the app files to the docker image
 COPY app/ app/
 
