@@ -26,8 +26,9 @@ class QAEmbedder:
       model_name (`str`): Directory containing the necessary tokenizer
         and model files.
     """
-    model = AutoModel.from_pretrained(model_name)
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    auth_token = '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'
+    model = AutoModel.from_pretrained(model_name, use_auth_token=auth_token)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token=auth_token)
     return model, tokenizer
   
   
