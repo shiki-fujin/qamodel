@@ -1,8 +1,8 @@
 FROM python:3.8.12-slim-buster
 
 # Install wget and required pip libraries
-RUN sudo yum update &&\
-    sudo yum install -y --no-install-recommends wget &&\
+RUN yum update &&\
+    yum install -y --no-install-recommends wget &&\
     rm -rf /var/lib/apt/lists/* &&\
     pip install --no-cache-dir transformers[torch] uvicorn fastapi
 
