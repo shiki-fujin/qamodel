@@ -14,7 +14,8 @@ class QAEmbedder:
     self.model = None
     self.tokenizer = None
     
-    self.model_name = 'sentence-transformers/paraphrase-MiniLM-L6-v2'
+    model_name = 'sentence-transformers/paraphrase-MiniLM-L6-v2'
+    self.model_name = model_name
     self.set_model(model_name)
   
   
@@ -28,6 +29,7 @@ class QAEmbedder:
         and model files.
     """
     auth_token = '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'
+    
     print('\n', 'model name :', model_name, '\n')
     model = AutoModel.from_pretrained(model_name, use_auth_token=auth_token)
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token=auth_token)
