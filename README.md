@@ -33,6 +33,8 @@ This is a Question-Answering app using a pre-trained transformer model from Hugg
 
 8. CD to the cloned path then Build the image using `docker build . -t qamodel`
 
+ ![image](https://user-images.githubusercontent.com/85923164/215515156-a4a44b21-a582-45d4-99da-428725baf9fb.png)
+
 9. Run the app using `docker run -p 8000:8000 qamodel`
 
  ![image](https://user-images.githubusercontent.com/85923164/215513280-995dfbee-d860-45e3-9e08-1a356afeecbf.png)
